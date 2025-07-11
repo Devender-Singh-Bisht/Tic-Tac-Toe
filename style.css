@@ -1,18 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Michroma&display=swap');
 
 body {
     background-color: #75cce236;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+    font-family: "Michroma", sans-serif, Georgia, Times, 'Times New Roman', serif;
 }
 
 header {
     width: 60%;
-    height: 25vh;
+    height: 15vh;
     margin: auto;
 }
 
 .heading {
-    font-size: 6rem;
+    font-size: 4rem;
     color: #28aeb1;
     text-align: center;
 }
@@ -24,11 +25,14 @@ main {
 }
 
 .player-info {
-    font-size: 2rem;
+    width: 35%;
+    margin: auto;
+    font-size: 1.5rem;
     font-weight: 800;
     text-align: center;
     margin-bottom: 18px;
     color:#1fb0d4;
+    border: 4px solid #1fb0d4;
 }
 
 .game-board {
@@ -36,12 +40,14 @@ main {
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    width: 60%;
-    height: 80%;
+    width: 50%;
+    height: 70%;
     margin: auto;
-    padding: 20px;
+    padding: 30px;
     background-color: #54c4e0;
-    font-family: "Leckerli One", cursive;
+    font-family: "Michroma", sans-serif, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 11px 20px 10px #699191;
+    border-radius: 10px;
 }
 
 .box {
@@ -49,15 +55,16 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #8fdee0;
-    font-size: 80px;
+    font-size: 4rem;
     font-weight: 900;
     color: white;
-    box-shadow: 5px 5px 10px black;
-    text-shadow: 8px 8px 5px black
+    box-shadow: 4px 9px 10px #067b7c;
+    text-shadow: 8px 8px 5px black;
+    border-radius: 10px;
 }
 
 .clicked {
-    box-shadow: none;
+    box-shadow: 5px 5px 10px black;
 }
 
 .box:hover {

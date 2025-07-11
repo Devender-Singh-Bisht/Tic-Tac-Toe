@@ -56,14 +56,13 @@ function displayMatchInfo(playerName) {
 
 
 async function gameController() {
-    const playerOne = "One";
-    const playerTwo = "Two";
+    const playerOne = "Player One";
+    const playerTwo = "Player Two";
 
     let playerPositions = {
         "one": [],
         "two": []
     };
-
 
     for (let i = 1; i < 6; i++) {
 
