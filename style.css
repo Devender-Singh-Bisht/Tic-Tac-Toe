@@ -14,6 +14,7 @@ header {
 
 .heading {
     font-size: 4rem;
+    font-weight: 900;
     color: #28aeb1;
     text-align: center;
 }
@@ -24,6 +25,29 @@ main {
     margin: auto;
 }
 
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:  #14595abd;
+    border-radius: 10px;
+}
+
+.start-btn {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: "Michroma", sans-serif, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    background-color: rgb(247, 36, 21);
+    border-radius: 10px;
+}
+
 .player-info {
     width: 35%;
     margin: auto;
@@ -32,7 +56,7 @@ main {
     text-align: center;
     margin-bottom: 18px;
     color:#1fb0d4;
-    border: 4px solid #1fb0d4;
+    /* border: 4px solid #1fb0d4; */
 }
 
 .game-board {
@@ -40,6 +64,7 @@ main {
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    position: relative;
     width: 50%;
     height: 70%;
     margin: auto;
@@ -74,4 +99,9 @@ main {
 
 footer {
     height: 20vh;
+}
+
+/* For Start button and overlay. */
+.display-none {
+    display: none;
 }
