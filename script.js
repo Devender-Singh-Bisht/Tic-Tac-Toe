@@ -52,7 +52,7 @@ function displayMatchInfo(playerName) {
     const nameContainer = document.querySelector(".player-info");
 
     nameContainer.innerText = `${playerName}`;
-    nameContainer.style.border = "4px solid #1fb0d4";
+    nameContainer.style.border = "4px solid rgb(255 16 0)";
 };
 
 

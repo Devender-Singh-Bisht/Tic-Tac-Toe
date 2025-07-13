@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Michroma&display=swap');
 
-body {
-    background-color: #75cce236;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: #5cc9e436;
     font-family: "Michroma", sans-serif, Georgia, Times, 'Times New Roman', serif;
 }
 
 header {
     width: 60%;
-    height: 15vh;
+    height: 25vh;
     margin: auto;
 }
 
@@ -36,27 +41,29 @@ main {
 }
 
 .start-btn {
+    width: 50%;
     position: absolute;
     top: 40%;
-    left: 30%;
+    left: 25%;
     padding: 15px 30px;
     font-size: 1.5rem;
     font-weight: 900;
     font-family: "Michroma", sans-serif, Georgia, Times, 'Times New Roman', serif;
     color: white;
-    background-color: rgb(247, 36, 21);
+    background-color: rgb(255 16 0);
     border-radius: 10px;
 }
 
 .player-info {
-    width: 35%;
+    width: 45%;
+    min-width: 300px;
+    height: 50px;
     margin: auto;
     font-size: 1.5rem;
     font-weight: 800;
     text-align: center;
     margin-bottom: 18px;
-    color:#1fb0d4;
-    /* border: 4px solid #1fb0d4; */
+    color: rgb(255 16 0);
 }
 
 .game-board {
@@ -66,7 +73,8 @@ main {
     gap: 20px;
     position: relative;
     width: 50%;
-    height: 70%;
+    min-width: 500px;
+    height: 80%;
     margin: auto;
     padding: 30px;
     background-color: #54c4e0;
@@ -98,10 +106,52 @@ main {
 }
 
 footer {
-    height: 20vh;
+    height: 5vh;
 }
 
 /* For Start button and overlay. */
 .display-none {
     display: none;
+}
+
+
+/* Responsiveness */
+
+@media  screen and (max-width: 840px) {
+    html {
+        font-size: 12px;
+    }
+
+    header {
+        height: 20vh;
+    }
+
+    .game-board {
+        min-width: 350px;
+    }
+}
+
+@media  screen and (max-width: 640px) {
+    header {
+        width: 90%;
+    }
+
+    main {
+        width: 95%;
+    }
+}
+
+@media  screen and (max-width: 480px) {
+    html {
+        font-size: 10px;
+    }
+
+    .player-info {
+        min-width: 200px;
+    }
+
+    .game-board {
+        width: 100%;
+        min-width: 250px;
+    }
 }
