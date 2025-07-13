@@ -51,7 +51,8 @@ function playersMove(playerPositions, playerNumber, boxNumberString) {
 function displayMatchInfo(playerName) {
     const nameContainer = document.querySelector(".player-info");
 
-    nameContainer.innerText = `${playerName}`
+    nameContainer.innerText = `${playerName}`;
+    nameContainer.style.border = "4px solid #1fb0d4";
 };
 
 
@@ -95,9 +96,30 @@ async function gameController() {
 }
 
 
-async function start() {
+const startBtn = document.querySelector(".start-btn");
+startBtn.innerText = "Start Game";
+const overlay = document.querySelector(".overlay");
+
+async function startGame() {
+    startBtn.classList.toggle("display-none");
+    overlay.classList.toggle("display-none");
+
     let a = await gameController();
     displayMatchInfo(a);
+
+    startBtn.innerText = "Restart";
+    startBtn.classList.toggle("display-none");
+    overlay.classList.toggle("display-none");
+
 }
 
-start();
+
+startBtn.addEventListener("click", () => {
+    const boxes = document.querySelectorAll(".box");
+    boxes.forEach(box => {
+        box.innerText = "";
+        box.classList.remove("clicked");
+    });
+
+    startGame();
+})
